@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedIn AutoConnect",
+    "description": "Automatically clicks all 'Connect' buttons available on search",
+    "version": "1.2.4",
+    "action": {
+      "default_icon": "logo4.png",
+      "default_popup": "popup/popup.html"
+    },
+    "permissions": ["scripting", "storage"],
+    "host_permissions": ["https://*.linkedin.com/*"],
+    "content_scripts": [
+      {
+        "matches": ["https://*.linkedin.com/search/results/people/*", "https://*.linkedin.com/mynetwork/*"],
+        "js": ["tab/tab.js"]
+      }
+    ]
+  }
+  
