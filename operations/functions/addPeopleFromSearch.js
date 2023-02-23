@@ -3,7 +3,7 @@ import { linkedInSelector } from "./urlsAndSelectors";
 import { isAutoConnectRunning } from "./const";
 
 export function addPeopleFromSearchPage() {
-  if (!isAutoConnectRunning) return;
+  if (!isAutoConnectRunning && invited >= 10) return;
 
   let invited = 0;
 
@@ -31,15 +31,13 @@ export function addPeopleFromSearchPage() {
   }
 
   setTimeout(() => {
-    if (!isAutoConnectRunning) return;
+    if (!isAutoConnectRunning && invited >= 10) return;
 
     let thereAreConnectButtonsLeft = false;
 
     if (
       document.querySelectorAll(linkedInSelector.connectButtonsFromSearchPage)
-        .length > 0 &&
-      document.querySelectorAll(linkedInSelector.connectButtonsFromSearchPage)
-        .length <= 9
+        .length > 0
     ) {
       thereAreConnectButtonsLeft = true;
     }
