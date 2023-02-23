@@ -1,34 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>LinkedIn AutoConnect</title>
-  <link rel="stylesheet" href="popup.css">
-</head>
+  <head>
+    <title>LinkedIn AutoConnect</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
 
-<body style="
-      width : 200px;
-      text-align : center "
-      >
-  <strong>LinkedIn AutoConnect</strong>
-  <div id="searchPeopleMessage">
-    <p>You're on 'Search People' page!</p>
-  </div>
-  <div id="selectOptionMessage">
-    <p>
-      Select one of the following<br />
-      LinkedIn Pages to open:
-    </p>
-    <div>
-      <button id="openLinkedInSearchPage">
-        <span>Search<br />People</span>
-      </button>
+  <body style="width: 200px; text-align: center">
+    <strong>LinkedIn AutoConnect</strong>
+    <div id="searchPeopleMessage">
+      <p>You're on 'Search People' page!</p>
     </div>
-    <div>
+    <div id="selectOptionMessage">
+      <p>
+        Select one of the following<br />
+        LinkedIn Pages to open:
+      </p>
+      <div>
+        <button id="openLinkedInSearchPage">
+          <span>Search<br />People</span>
+        </button>
+      </div>
+      <div></div>
     </div>
-  </div>
-  <button id="startButton"><span>START</span></button>
-  <button id="stopButton"><span>STOP</span></button>
-  <script type="module" src="popup.js"></script>
-</body>
-
+    <button id="startButton"><span>START</span></button>
+    <button id="stopButton"><span>STOP</span></button>
+    <script type="module" src="ui.js"></script>
+  </body>
 </html>

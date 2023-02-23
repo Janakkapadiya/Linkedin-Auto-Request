@@ -50,10 +50,13 @@ startButton.addEventListener("click", () => {
       "isAutoConnectAvailable",
       response => {
         if (!response) {
-          chrome.tabs.executeScript({ file: "/tab/tab.js" }, () => {
-            chrome.tabs.sendMessage(activeTab.id, "startAutoConnect");
-            hideStartButton();
-          });
+          chrome.tabs.executeScript(
+            { file: "/operations/operation.js" },
+            () => {
+              chrome.tabs.sendMessage(activeTab.id, "startAutoConnect");
+              hideStartButton();
+            }
+          );
         } else {
           chrome.tabs.sendMessage(activeTab.id, "startAutoConnect");
           hideStopButton();
